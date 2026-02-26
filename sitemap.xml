@@ -1,0 +1,32 @@
+{
+  "hero_title": "OAKRIDGE & STERLING, INC.",
+  "hero_sub": "Memecoin premium su World Chain. Humans‑only dentro World App (PUF).",
+  "btn_open_puf": "Apri in World App (PUF)",
+  "btn_dex": "Grafico su Dexscreener",
+  "pitch_h": "Pitch",
+  "pitch_p": "OAKS è una memecoin a brand araldico con supply fissa, nessuna tassa e nessun mint post‑deploy. Sfrutta la distribuzione humans‑only di PUF e la UX mobile di World App.",
+  "tokenomics_h": "Tokenomics",
+  "tokenomics_l": [
+    "Nome: OAKRIDGE & STERLING, INC.",
+    "Ticker: OAKS",
+    "Chain: World Chain",
+    "Supply totale: 1,000,000,000 OAKS (fissa)",
+    "Tasse: 0% buy / 0% sell / 0% transfer",
+    "Mint post‑deploy: disattivato",
+    "Permessi: renounce/timelock ove applicabile",
+    "Distribuzione iniziale: 92–94% LP+mercato, 3–5% community/quest, 2–3% ops"
+  ],
+  "lplock_h": "Proof di LP‑lock",
+  "lplock_p": "Trasparenza: il liquidity pool è bloccato. Dati on‑chain:",
+  "how_h": "Come acquistare in 10 secondi",
+  "how_l": [
+    "Apri World App sullo smartphone.",
+    "Tocca ‘Apri in World App (PUF)’: si apre la scheda OAKS in PUF.",
+    "Conferma il trade. Per gli utenti con World ID molte operazioni sono gas‑free."
+  ],
+  "newsletter_h": "Newsletter / Annunci",
+  "newsletter_p": "Iscriviti per aggiornamenti (IT/EN/ES/PT).",
+  "newsletter_email": "La tua email",
+  "newsletter_btn": "Iscriviti",
+  "disclaimer": "Le memecoin sono altamente speculative. Nessuna indicazione di rendimento; non è consulenza finanziaria."
+}

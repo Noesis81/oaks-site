@@ -1,0 +1,10 @@
+
+const state={lang:(new URL(location).searchParams.get('lang'))||localStorage.getItem('lang')||'it',cfg:null};
+function doc(s){return document.querySelector(s)}
+function fillList(sel,arr){const ul=doc(sel);ul.innerHTML='';arr.forEach(x=>{const li=document.createElement('li');li.textContent=x;ul.appendChild(li)})}
+async function loadConfig(){const r=await fetch('./config/config.json');state.cfg=await r.json()}
+async function loadLang(){const r=await fetch(`./i18n/${state.lang}.json`);const t=await r.json();
+ doc('#hero-title').textContent=t.hero_title;doc('#hero-sub').textContent=t.hero_sub;doc('#btn-open-puf').textContent=t.btn_open_puf;doc('#btn-dex').textContent=t.btn_dex;doc('#pitch-h').textContent=t.pitch_h;doc('#pitch-p').textContent=t.pitch_p;doc('#tok-h').textContent=t.tokenomics_h;fillList('#tok-list',t.tokenomics_l);doc('#lplock-h').textContent=t.lplock_h;doc('#lplock-p').textContent=t.lplock_p;doc('#how-h').textContent=t.how_h;fillList('#how-list',t.how_l);doc('#nl-h').textContent=t.newsletter_h;doc('#nl-p').textContent=t.newsletter_p;doc('#email').placeholder=t.newsletter_email;doc('#nl-btn').value=t.newsletter_btn;doc('#disc').textContent=t.disclaimer}
+function setLang(code){state.lang=code;localStorage.setItem('lang',code);location.search='?lang='+code}
+async function init(){await loadConfig();await loadLang();document.querySelectorAll('.badge.ticker').forEach(b=>b.textContent=state.cfg.ticker);doc('#open-puf').href=state.cfg.quickAction;doc('#open-dex').href=state.cfg.dexPairUrl;doc('#lp-tx').textContent=state.cfg.lpLockTx;doc('#lp-exp').textContent=state.cfg.lpLockExpiry;doc('#lp-addr').textContent=state.cfg.lpTokenAddress}
+document.addEventListener('DOMContentLoaded',init)
